@@ -90,3 +90,34 @@ float mapCurrentToTemperature(float current_mA) {
   float temperature = tempMin + slope * (current_mA - currentMin);
   return temperature;
 }
+```
+
+#### Final Production Code
+```cpp
+const int AnalogInput = A0;
+
+void setup() {
+  Serial.begin(9600);
+}
+
+void loop() {
+  int sensorValue = analogRead(AnalogInput);
+  
+  // Calibrated map function based on experimental ice bath (0 C) and ambient baselines
+  int temperature = map(sensorValue, 245, 430, 0, 700);
+  float tempC = temperature / 10.0;
+  float tempF = tempC * 9.0 / 5.0 + 32.0;
+  
+  Serial.print("Raw ADC: ");
+  Serial.print(sensorValue);
+  Serial.print(" | Voltage: ");
+  Serial.print(sensorValue * (5.0 / 1023.0), 3);
+  Serial.print(" V | Temperature: ");
+  Serial.print(tempC, 2);
+  Serial.print(" °C / ");
+  Serial.print(tempF, 2);
+  Serial.println(" °F");
+  
+  delay(1000);
+}
+  ```
