@@ -7,12 +7,12 @@ An automated thermodynamic testing rig using an Elegoo Mega R3 and RTD PT100 sen
 
 ---
 
-## 📋 Project Overview & Objectives
+## Project Overview & Objectives
 The purpose of this project is to build an instrumentation rig capable of measuring and logging the temperature profiles of different materials under uniform heating and cooling conditions. By analyzing how different objects (such as metals, plastics, and wood) absorb and reject thermal energy over time, the system provides a clear, data-driven look at transient heat transfer and material thermal conductivity.
 
 ---
 
-## ⚡ System Architecture & Hardware
+## System Architecture & Hardware
 The apparatus utilizes a classic industrial instrumentation design, deploying a 4-20 mA loop-powered transmitter to convert low-voltage sensor resistance changes into a robust analog signal resilient to noise.
 
 ### Hardware Component List
@@ -29,9 +29,12 @@ The apparatus utilizes a classic industrial instrumentation design, deploying a 
 
 | Component | Hardware Connection Image |
 | :--- | :--- |
-| **RTD PT100 Sensor & Transmitter** | ![RTD PT100 Sensor and Transmitter](images/rtd_sensor.png) |
-| **24V DC Power Supply Link** | ![24V Adjustable Power Source](images/power_supply.png) |
-| **Full Instrumentation Setup** | ![Full Loop and Microcontroller Array](images/full_setup.png) |
+| **RTD PT100 Sensor & Transmitter** | ![RTD PT100 Sensor and Transmitter](<img width="384" height="512" alt="RTD PT100" src="https://github.com/user-attachments/assets/7d4841ec-5fad-4343-98a7-f8ebbb837304" />
+) |
+| **24V DC Power Supply Link** | ![24V Adjustable Power Source](<img width="384" height="512" alt="PowerSource" src="https://github.com/user-attachments/assets/49e61143-50dd-471a-8e04-d89bac125b58" />
+) |
+| **Full Instrumentation Setup** | ![Full Loop and Microcontroller Array](<img width="512" height="384" alt="FullSetup" src="https://github.com/user-attachments/assets/137af113-2999-4efc-8b07-aadca801a6fd" />
+) |
 
 ---
 
@@ -45,7 +48,7 @@ By manipulating the material type (**Input Variable**) while keeping the geometr
 
 ---
 
-## 🛠️ Engineering Challenges & Troubleshooting
+## Engineering Challenges & Troubleshooting
 
 ### 1. Hardware Diagnostics: The Broken Current Loop
 * **The Challenge:** During initial prototype assembly, the serial console showed no temperature changes or incoming data signals.
